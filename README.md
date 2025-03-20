@@ -1,1 +1,1 @@
-# computerstore
+# computer-store
