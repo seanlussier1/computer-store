@@ -1,17 +1,7 @@
-export async function fetchData(resourceUri) {
-
-    try {
-        const response = await fetch(resourceUri);
-        consolge.log(response);
-
-        if(!response.ok) {
-            throw new Error (`An Error has occured while processing the request ${response.status}`);
-        }
-
-        const data = await response.json();
-        return data;
-    } 
-    catch(error) {
-        throw error;
+export async function fetchData(url) {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`Error fetching data from ${url}: ${response.statusText}`);
     }
+    return await response.json();
 }
