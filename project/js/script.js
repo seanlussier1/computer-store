@@ -1,4 +1,4 @@
-import { fetchData } from "/project/js/modules/fetchWrapper.js";
+// import { fetchData } from "/project/js/modules/fetchWrapper.js";
 
 document.addEventListener('DOMContentLoaded', initApp);
 
@@ -30,15 +30,15 @@ function displayProducts(products) {
     
     productListing.innerHTML = '';
 
-    products.forEach(product => {
+    products.products.forEach(product => {
         const productElement = document.createElement("div");
         productElement.classList.add("product-item");
 
         productElement.innerHTML = `
-            <img src="${product.image.url}" alt="${product.product_name}" class="product-image">
-            <h3 class="product-name">${product.product_name}</h3>
+            <h3 class="product-name">${product.item_title}</h3>
+            <img src="${product.thumbnail_image}" alt="${product.product_name}" class="product-image">
             <p class="product-description">${product.description}</p>
-            <p class="product-price">${product.price}</p>
+            <p class="product-price">${product.unit_price}</p>
         `;
 
         productListing.appendChild(productElement);
