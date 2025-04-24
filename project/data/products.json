@@ -2,8 +2,8 @@
     "categories":[
         {
             "category_id": 1,
-            "category_name": "Products",
-            "description": "Category containing all of the products."
+            "category_name": "Recommended",
+            "description": "Category containing all of the recommended products."
         },
         {
             "category_id": 2,
@@ -81,7 +81,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://img.pokemondb.net/artwork/avif/tandemaus.avif"
         },
         {
             "item_id": 1,
@@ -92,7 +92,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://img.pokemondb.net/artwork/avif/tandemaus.avif"
         },
         {
             "item_id": 1,
@@ -103,7 +103,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://img.pokemondb.net/artwork/avif/tandemaus.avif"
         },
         {
             "item_id": 1,
@@ -114,7 +114,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://img.pokemondb.net/artwork/avif/tandemaus.avif"
         },
         {
             "item_id": 1,
@@ -125,7 +125,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://assets.pokemon.com/assets/cms2/img/pokedex/full//438.png"
         },
         {
             "item_id": 1,
@@ -136,7 +136,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://assets.pokemon.com/assets/cms2/img/pokedex/full//438.png"
         },
         {
             "item_id": 1,
@@ -147,7 +147,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://assets.pokemon.com/assets/cms2/img/pokedex/full//438.png"
         },
         {
             "item_id": 1,
@@ -158,7 +158,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://assets.pokemon.com/assets/cms2/img/pokedex/full//438.png"
         },
         {
             "item_id": 1,
@@ -169,7 +169,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://ccimg.canadacomputers.com/Products/800x800/135/4186/267976/52300.jpg"
         },
         {
             "item_id": 1,
@@ -180,7 +180,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://ccimg.canadacomputers.com/Products/800x800/135/4186/267976/52300.jpg"
         },
         {
             "item_id": 1,
@@ -191,7 +191,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://ccimg.canadacomputers.com/Products/800x800/135/4186/267976/52300.jpg"
         },
         {
             "item_id": 1,
@@ -202,7 +202,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://ccimg.canadacomputers.com/Products/800x800/135/4186/267976/52300.jpg"
         },
         {
             "item_id": 1,
@@ -213,7 +213,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTuT7vCL4IjWDuexUxKBohErT9GUhI67EcpciIST01lq2lwGsNA3twGkFehVEq_2b3AcYnHAijQT1oZ8A36B2C0ymQGdB--FU6qerGWor-Fq0JskBEsOk9wRA"
         },
         {
             "item_id": 1,
@@ -224,7 +224,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTuT7vCL4IjWDuexUxKBohErT9GUhI67EcpciIST01lq2lwGsNA3twGkFehVEq_2b3AcYnHAijQT1oZ8A36B2C0ymQGdB--FU6qerGWor-Fq0JskBEsOk9wRA"
         },
         {
             "item_id": 1,
@@ -235,7 +235,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTuT7vCL4IjWDuexUxKBohErT9GUhI67EcpciIST01lq2lwGsNA3twGkFehVEq_2b3AcYnHAijQT1oZ8A36B2C0ymQGdB--FU6qerGWor-Fq0JskBEsOk9wRA"
         },
         {
             "item_id": 1,
@@ -246,7 +246,7 @@
             "unit_price": 19.99,
             "quantity_in_stock": 25,
             "make":"intel",
-            "thumbnail_image":"https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/909.png"
+            "thumbnail_image":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTuT7vCL4IjWDuexUxKBohErT9GUhI67EcpciIST01lq2lwGsNA3twGkFehVEq_2b3AcYnHAijQT1oZ8A36B2C0ymQGdB--FU6qerGWor-Fq0JskBEsOk9wRA"
         }
     ]
 }
