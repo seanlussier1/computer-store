@@ -5,28 +5,13 @@ import { displayComputerParts } from "/js/modules/computer.js";
 import { displayDeals } from "/js/modules/deals.js";
 import { displayLaptops } from "/js/modules/laptop.js";
 import { displayDesktops } from "/js/modules/desktop.js";
+import { productDetails } from "/js/modules/itemDetails.js";
 
 document.addEventListener('DOMContentLoaded', initApp);
 
 function initApp() {
     console.log("initializing the app");
     fetchProducts();
-    const searchBar = document.querySelector("#input-search-show")
-    searchBar.addEventListener('keypress', () => {
-        // 1) Get what the user typed in the input box.
-         const searchKeyword = searchBar.value;
-         console.log(searchKeyword)
-        // 2) We need to loop through the table rows, and search for a matching show name.
-        const productItem = document.querySelector(".product-Listings");
-        productItem.childNodes.forEach(item => {
-            item.childNodes.forEach(elem=> {
-                if (elem.textContent.toLowerCase().includes(searchKeyword.toLowerCase())) {
-                } else {
-                    elem.remove();
-                }
-            });
-        });
-    });
 }
 
 async function fetchProducts() {
@@ -47,19 +32,28 @@ async function fetchProducts() {
         const isDealsPage = document.querySelector('.deals-page');
         const isLaptopPage = document.querySelector('.laptop-page');
         const isDesktopPage = document.querySelector('.desktop-page');
+        const isItemDetails = document.querySelector('.item-details');
 
         if (isHomePage) {
-            displayRecommended(products); 
+            displayRecommended(products);
+            hasSearchBar() 
         } else if (isRecommendedPage) {
-            displayProducts(products); 
+            displayProducts(products);
+            hasSearchBar() 
         } else if (isComputerPartsPage) {
-            displayComputerParts(products); 
+            displayComputerParts(products);
+            hasSearchBar() 
         } else if (isDealsPage) {
-            displayDeals(products); 
+            displayDeals(products);
+            hasSearchBar() 
         } else if (isLaptopPage) {
             displayLaptops(products);
+            hasSearchBar()
         } else if (isDesktopPage) {
             displayDesktops(products);
+            hasSearchBar()
+        } else if (isItemDetails) {
+            productDetails(products);
         } else {
             console.log("no matching page.");
         }
@@ -68,4 +62,22 @@ async function fetchProducts() {
     } catch (error) {
         console.log(`Error while fetching: ${error.message}`);
     }
+}
+
+function hasSearchBar() {
+    const searchBar = document.querySelector("#input-search-show")
+    searchBar.addEventListener('keypress', () => {
+        // 1) Get what the user typed in the input box.
+        const searchKeyword = searchBar.value;
+        console.log(searchKeyword)
+        const productItem = document.querySelector(".product-Listings");
+        productItem.childNodes.forEach(item => {
+            item.childNodes.forEach(elem=> {
+                if (elem.textContent.toLowerCase().includes(searchKeyword.toLowerCase())) {
+                } else {
+                    elem.remove();
+                }
+            });
+        });
+    });
 }
