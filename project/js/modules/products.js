@@ -1,6 +1,6 @@
 export function displayProducts(products) {
-    const productListing = document.querySelector(".recommended-listing");
-    
+    const computerListing = document.querySelector(".product-Listings");
+
     productListing.innerHTML = '';
 
     products.products.forEach(product => {
@@ -8,10 +8,15 @@ export function displayProducts(products) {
         productElement.classList.add("product-item");
 
         productElement.innerHTML = `
-            <h3 class="product-name">${product.item_title}</h3>
-            <img class="product-image" src="${product.thumbnail_image}" alt="${product.product_name}" >
-            <p class="product-description">${product.description}</p>
-            <p class="product-price">${product.unit_price}</p>
+           <div class="card" style="width: 18rem;">
+            <img src="${product.thumbnail_image}" class="card-img-top" alt="Image of ${product.item_title}">
+            <div class="card-body">
+                <h1 class="product-name">${product.item_title}</h3>
+                <p class="card-text">${product.description}</p>
+                <p class="product-price">$${product.unit_price}</p>
+                <a href="item-listing.html">Item Listing</a>
+            </div>
+        </div>
         `;
 
         productListing.appendChild(productElement);

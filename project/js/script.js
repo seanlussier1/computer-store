@@ -11,6 +11,22 @@ document.addEventListener('DOMContentLoaded', initApp);
 function initApp() {
     console.log("initializing the app");
     fetchProducts();
+    const searchBar = document.querySelector("#input-search-show")
+    searchBar.addEventListener('keypress', () => {
+        // 1) Get what the user typed in the input box.
+         const searchKeyword = searchBar.value;
+         console.log(searchKeyword)
+        // 2) We need to loop through the table rows, and search for a matching show name.
+        const productItem = document.querySelector(".product-Listings");
+        productItem.childNodes.forEach(item => {
+            item.childNodes.forEach(elem=> {
+                if (elem.textContent.toLowerCase().includes(searchKeyword.toLowerCase())) {
+                } else {
+                    elem.remove();
+                }
+            });
+        });
+    });
 }
 
 async function fetchProducts() {

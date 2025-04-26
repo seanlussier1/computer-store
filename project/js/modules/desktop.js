@@ -1,6 +1,5 @@
 export function displayDesktops(products) {
-    const computerListing = document.querySelector(".desktop-listing");
-    computerListing.innerHTML = '';
+    const computerListing = document.querySelector(".product-Listings");
 
     const filteredProducts = products.products.filter(product => product.category_id === 5);
 
@@ -9,10 +8,15 @@ export function displayDesktops(products) {
         productElement.classList.add("desktop-item");
 
         productElement.innerHTML = `
-            <h3 class="product-name">${product.item_title}</h3>
-            <img class="product-image" src="${product.thumbnail_image}" alt="${product.item_title}" >
-            <p class="product-description">${product.description}</p>
-            <p class="product-price">$${product.unit_price}</p>
+           <div class="card" style="width: 18rem;">
+            <img src="${product.thumbnail_image}" class="card-img-top" alt="Image of ${product.item_title}">
+            <div class="card-body">
+                <h1 class="product-name">${product.item_title}</h3>
+                <p class="card-text">${product.description}</p>
+                <p class="product-price">$${product.unit_price}</p>
+                <a href="item-listing.html">Item Listing</a>
+            </div>
+        </div>
         `;
 
         computerListing.appendChild(productElement);
