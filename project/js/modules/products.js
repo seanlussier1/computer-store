@@ -1,8 +1,6 @@
 export function displayProducts(products) {
     const computerListing = document.querySelector(".product-Listings");
 
-    productListing.innerHTML = '';
-
     products.products.forEach(product => {
         const productElement = document.createElement("div");
         productElement.classList.add("product-item");
@@ -19,6 +17,6 @@ export function displayProducts(products) {
         </div>
         `;
 
-        productListing.appendChild(productElement);
+        computerListing.appendChild(productElement);
     });  
 }
