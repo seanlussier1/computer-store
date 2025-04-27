@@ -5,7 +5,7 @@ export function displayProducts(products) {
     products.products.forEach(product => {
         const productElement = document.createElement("div");
         productElement.classList.add("card");
-        productElement.style.width = "18rem"
+        productElement.style.width = "18rem";
         productElement.innerHTML = `
             <img src="${product.thumbnail_image}" class="card-img-top" alt="Image of ${product.item_title}">
             <div class="card-body">
