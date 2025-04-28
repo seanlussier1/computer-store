@@ -73,9 +73,19 @@ function hasSearchBar() {
         const productItem = document.querySelector(".product-Listings");
         productItem.childNodes.forEach(item => {
             item.childNodes.forEach(elem=> {
-                if (elem.textContent.toLowerCase().includes(searchKeyword.toLowerCase())) {
-                } else {
-                    elem.remove();
+                // console.log(elem);
+                if (elem.hasChildNodes()) {
+                    elem.childNodes.forEach(elemChild => {
+                        // console.log(elemChild.className);
+                        if (elemChild.className === "product-name") {
+                            // console.log(elemChild.textContent);
+                            if (elemChild.textContent.toLowerCase().includes(searchKeyword.toLowerCase())) {
+                                item.style.display = "block";
+                            } else {
+                                item.style.display = "none";
+                            }
+                        }
+                    });
                 }
             });
         });
