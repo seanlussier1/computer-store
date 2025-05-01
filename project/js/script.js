@@ -6,6 +6,7 @@ import { displayDeals } from "/js/modules/deals.js";
 import { displayLaptops } from "/js/modules/laptop.js";
 import { displayDesktops } from "/js/modules/desktop.js";
 import { productDetails } from "/js/modules/itemDetails.js";
+import { initLeafletMap } from "./modules/map.js";
 
 document.addEventListener('DOMContentLoaded', initApp);
 
@@ -33,6 +34,8 @@ async function fetchProducts() {
         const isLaptopPage = document.querySelector('.laptop-page');
         const isDesktopPage = document.querySelector('.desktop-page');
         const isItemDetails = document.querySelector('.item-details');
+        const isMap = document.querySelector('.map-page');
+        // const page
 
         if (isHomePage) {
             displayRecommended(products);
@@ -54,6 +57,8 @@ async function fetchProducts() {
             hasSearchBar()
         } else if (isItemDetails) {
             productDetails(products);
+        } else if (isMap) {
+            initLeafletMap();
         } else {
             console.log("no matching page.");
         }
