@@ -27,37 +27,29 @@ async function fetchProducts() {
         const products = await response.json();
         console.log(products);
 
-        const isHomePage = document.querySelector(".products-page");
-        const isRecommendedPage = document.querySelector(".recommended-page");
-        const isComputerPartsPage = document.querySelector('.computer-parts-page');
-        const isDealsPage = document.querySelector('.deals-page');
-        const isLaptopPage = document.querySelector('.laptop-page');
-        const isDesktopPage = document.querySelector('.desktop-page');
-        const isItemDetails = document.querySelector('.item-details');
-        const isMap = document.querySelector('.map-page');
-        // const page
-
-        if (isHomePage) {
+        const page = document.querySelector("[data-page]").dataset.page;
+        console.log(page);
+        if (page === "home-page") {
             displayRecommended(products);
             hasSearchBar() 
-        } else if (isRecommendedPage) {
+        } else if (page === "product-listing-page") {
             displayProducts(products);
             hasSearchBar() 
-        } else if (isComputerPartsPage) {
+        } else if (page === "computer-parts-page") {
             displayComputerParts(products);
             hasSearchBar() 
-        } else if (isDealsPage) {
+        } else if (page === "deals-page") {
             displayDeals(products);
             hasSearchBar() 
-        } else if (isLaptopPage) {
+        } else if (page === "laptop-page") {
             displayLaptops(products);
             hasSearchBar()
-        } else if (isDesktopPage) {
+        } else if (page === "desktop-page") {
             displayDesktops(products);
             hasSearchBar()
-        } else if (isItemDetails) {
+        } else if (page === "item-details") {
             productDetails(products);
-        } else if (isMap) {
+        } else if (page === "map-page") {
             initLeafletMap();
         } else {
             console.log("no matching page.");
@@ -71,9 +63,9 @@ async function fetchProducts() {
 
 function hasSearchBar() {
     const searchBar = document.querySelector("#input-search-show")
-    searchBar.addEventListener('keypress', () => {
+    searchBar.addEventListener('input', () => {
         // 1) Get what the user typed in the input box.
-        const searchKeyword = searchBar.value;
+        const searchKeyword = "" + searchBar.value;
         console.log(searchKeyword)
         const productItem = document.querySelector(".product-Listings");
         productItem.childNodes.forEach(item => {
