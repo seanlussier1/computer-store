@@ -18,8 +18,39 @@ export function productDetails(products) {
                  <p>Quantity of product: ${filteredProducts[0].quantity_in_stock}</p>
                  <p>Product ID: ${filteredProducts[0].item_id}</p>
              </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary" id="add-to-cart">Add to Cart</button>
+                    <button class="btn btn-secondary" id="buy-now">Buy Now</button>
          `;
         console.log(filteredProducts[0].item_title)
+
+        const addToCartButton = document.getElementById("add-to-cart");
+        addToCartButton.addEventListener("click", () => {
+            
+            const productToAdd = {
+                item_id: filteredProducts[0].item_id,
+                item_title: filteredProducts[0].item_title,
+                brand: filteredProducts[0].brand,
+                make: filteredProducts[0].make,
+                unit_price: filteredProducts[0].unit_price,
+                thumbnail_image: filteredProducts[0].thumbnail_image,
+                quantity: 1
+            };
+            
+            let cart;
+            const cartData = localStorage.getItem("cart");
+            if (cartData) {
+                cart = JSON.parse(cartData);
+                cart.push(productToAdd);
+            } else {
+                cart = [productToAdd];
+            }
+            
+            console.log(cart);
+            localStorage.setItem("cart", JSON.stringify(cart));
+    
+        });
+
         computerListing.appendChild(productElement);
 
 };  
