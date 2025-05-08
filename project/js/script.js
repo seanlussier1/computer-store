@@ -1,11 +1,11 @@
-import { fetchData } from "/js/modules/fetchWrapper.js";
-import { displayProducts } from "/js/modules/products.js";
-import { displayRecommended } from "/js/modules/home.js";
-import { displayComputerParts } from "/js/modules/computer.js";
-import { displayDeals } from "/js/modules/deals.js";
-import { displayLaptops } from "/js/modules/laptop.js";
-import { displayDesktops } from "/js/modules/desktop.js";
-import { productDetails } from "/js/modules/itemDetails.js";
+import { fetchData } from "./modules/fetchWrapper.js";
+import { displayProducts } from "./modules/products.js";
+import { displayRecommended } from "./modules/home.js";
+import { displayComputerParts } from "./modules/computer.js";
+import { displayDeals } from "./modules/deals.js";
+import { displayLaptops } from "./modules/laptop.js";
+import { displayDesktops } from "./modules/desktop.js";
+import { productDetails } from "./modules/itemDetails.js";
 import { initLeafletMap } from "./modules/map.js";
 
 document.addEventListener('DOMContentLoaded', initApp);
