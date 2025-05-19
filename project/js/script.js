@@ -5,7 +5,7 @@ import { displayComputerParts } from "./modules/computer.js";
 import { displayDeals } from "./modules/deals.js";
 import { displayLaptops } from "./modules/laptop.js";
 import { displayDesktops } from "./modules/desktop.js";
-import { productDetails } from "./modules/itemDetails.js";
+import { displayCartItems, productDetails } from "./modules/itemDetails.js";
 import { initLeafletMap } from "./modules/map.js";
 
 document.addEventListener('DOMContentLoaded', initApp);
@@ -51,6 +51,8 @@ async function fetchProducts() {
             productDetails(products);
         } else if (page === "map-page") {
             initLeafletMap();
+        } else if (page === "cart-page") {
+            displayCartItems();
         } else {
             console.log("no matching page.");
         }

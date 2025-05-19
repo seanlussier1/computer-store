@@ -4,7 +4,7 @@ export function productDetails(products) {
     const filteredProducts = products.products.filter(product => product.item_id.toString() === sessionStorage.getItem("show-id"));
 
         const productElement = document.getElementById("item-listing");
-        productElement.classList.add("card");
+        productElement.classList.add("item-details-info");  // TODO: style this in css
         productElement.style.width = "30rem";
 
         productElement.innerHTML = `
@@ -53,10 +53,58 @@ export function productDetails(products) {
 
         computerListing.appendChild(productElement);
 
-};  
-function createCustomElement(parent,newElementName,content){
+}; 
+
+function createCustomElement(parent,newElementName,content) {
     const newElem = document.createElement(newElementName);
     newElem.textContent = content;
     parent.appendChild(newElem);
     return newElem;
 }
+
+export function displayCartItems() {
+    const cartListing = document.querySelector(".cart-container");
+    if (!cartListing) {
+        console.error("Cart listing container not found!");
+        return;
+    }
+
+    cartListing.innerHTML = "";
+
+    const cartData = localStorage.getItem("cart");
+    const cart = cartData ? JSON.parse(cartData) : [];
+
+    if (cart.length === 0) {
+        createCustomElement(cartListing, "p", "Your cart is empty.");
+        return;
+    }
+
+    const cartContainer = document.getElementsByClassName("cart-container")[0];
+    cartContainer.classList.add("cart-item-display"); //TODO: style this in css
+    cartContainer.style.width = "40%"; // TODO: Change this to css later
+
+    cart.forEach(item => {
+        const itemInfo = createCustomElement(cartContainer, "div", "");
+        const itemImage = document.createElement("img");
+        itemInfo.classList.add("item-body");
+
+        createCustomElement(itemInfo, "h1", item.item_title).classList.add("product-name");
+        createCustomElement(itemInfo, "p", `Brand: ${item.brand}`);
+        createCustomElement(itemInfo, "p", `Make: ${item.make}`);
+        createCustomElement(itemInfo, "p", `Price: $${item.unit_price}`).classList.add("product-price");
+        createCustomElement(itemInfo, "p", `Product ID: ${item.item_id}`);
+
+        itemImage.src = item.thumbnail_image;
+        itemImage.alt = `Image of ${item.item_title}`;
+        itemImage.classList.add("item-img-top");
+        itemInfo.prepend(itemImage);
+        
+        // TODO: beside every item, it should have a remove button to remove from the cart
+        });
+
+        const totalElement = document.querySelector(".price-calculation");
+        if (cart.length > 0) {
+            const totalPrice = cart.reduce((sum, item) => sum + item.unit_price * item.quantity, 0);
+            totalElement.textContent = `Total: $${totalPrice}`;
+        } 
+    }
