@@ -5,8 +5,9 @@ import { displayComputerParts } from "./modules/computer.js";
 import { displayDeals } from "./modules/deals.js";
 import { displayLaptops } from "./modules/laptop.js";
 import { displayDesktops } from "./modules/desktop.js";
-import { displayCartItems, productDetails } from "./modules/itemDetails.js";
+import { productDetails } from "./modules/itemDetails.js";
 import { initLeafletMap } from "./modules/map.js";
+import { displayCartItems } from "./modules/cart.js";
 
 document.addEventListener('DOMContentLoaded', initApp);
 
