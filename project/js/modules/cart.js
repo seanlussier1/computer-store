@@ -6,13 +6,16 @@ export function displayCartItems() {
     }
 
     cartListing.innerHTML = "";
-
     const cartData = localStorage.getItem("cart");
     const cart = cartData ? JSON.parse(cartData) : [];
 
     if (cart.length === 0) {
         createCustomElement(cartListing, "p", "Your cart is empty.");
-        
+        const totalElement = document.querySelector(".price-calculation");
+        if (totalElement) {
+            totalElement.textContent = "Total: $0.00";
+        }
+
         return;
     }
 
@@ -29,7 +32,16 @@ export function displayCartItems() {
         createCustomElement(itemInfo, "p", `Brand: ${item.brand}`);
         createCustomElement(itemInfo, "p", `Make: ${item.make}`);
         createCustomElement(itemInfo, "p", `Price: $${item.unit_price}`).classList.add("product-price");
-        createCustomElement(itemInfo, "p", `Product ID: ${item.item_id}`);
+
+        // ADDING QUANTITY INPUT
+        const quantityContainer = createCustomElement(itemInfo, "div", "");
+        const quantityLabel = createCustomElement(quantityContainer, "span", "Quantity:");
+        const quantityInput = document.createElement("input");
+        quantityInput.type = "number";
+        quantityInput.min = "1";
+        quantityInput.value = item.quantity || 1;
+        quantityInput.dataset.index = index;
+        quantityContainer.appendChild(quantityInput);
 
         itemImage.src = item.thumbnail_image;
         itemImage.classList.add("item-img-top");
@@ -39,8 +51,6 @@ export function displayCartItems() {
         removeButton.dataset.index = index; 
         });
 
-        
-
         // REMOVE BUTTON ON EACH ITEM
         const removeButtons = document.querySelectorAll(".item-card button");
         removeButtons.forEach(button => {
@@ -48,6 +58,21 @@ export function displayCartItems() {
             const index = parseInt(button.dataset.index);
             removeCartItem(index);
             displayCartItems();
+            });
+        });
+
+        // UPDATE QUANTITY
+        const quantityInputs = document.querySelectorAll(".item-card input[type='number']");
+        quantityInputs.forEach(input => {
+        input.addEventListener("change", () => {
+            const index = parseInt(input.dataset.index);
+            const newQuantity = parseInt(input.value);
+            if (newQuantity >= 1) {
+                updateCartQuantity(index, newQuantity);
+                displayCartItems();
+            } else {
+                input.value = item.quantity || 1;
+                }
             });
         });
 
@@ -66,10 +91,23 @@ function removeCartItem(index) {
         cart = cartData ? JSON.parse(cartData) : [];
     } catch (e) {
         console.error("Invalid cart data:", e);
-        return;
     }
     cart.splice(index, 1);
     localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function updateCartQuantity(index, newQuantity) {
+    const cartData = localStorage.getItem("cart");
+    let cart;
+    try {
+        cart = cartData ? JSON.parse(cartData) : [];
+    } catch (e) {
+        console.error("Invalid cart data:", e);
+    }
+    if (cart[index]) {
+        cart[index].quantity = newQuantity;
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
 }
 
 function createCustomElement(parent,newElementName,content) {
