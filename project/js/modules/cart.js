@@ -2,7 +2,6 @@ export function displayCartItems() {
     const cartListing = document.querySelector(".cart-container");
     if (!cartListing) {
         console.error("Cart listing container not found!");
-        return;
     }
 
     cartListing.innerHTML = "";
@@ -15,8 +14,6 @@ export function displayCartItems() {
         if (totalElement) {
             totalElement.textContent = "Total: $0.00";
         }
-
-        return;
     }
 
     const cartContainer = document.getElementsByClassName("cart-container")[0];

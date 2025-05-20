@@ -8,12 +8,14 @@ import { displayDesktops } from "./modules/desktop.js";
 import { productDetails } from "./modules/itemDetails.js";
 import { initLeafletMap } from "./modules/map.js";
 import { displayCartItems } from "./modules/cart.js";
+import { submitForm } from "./modules/contact-form.js";
 
 document.addEventListener('DOMContentLoaded', initApp);
 
 function initApp() {
     console.log("initializing the app");
     fetchProducts();
+    contactForm();
 }
 
 async function fetchProducts() {
@@ -90,5 +92,14 @@ function hasSearchBar() {
                 }
             });
         });
+    });
+}
+
+function contactForm() {
+    const formRegistration = document.getElementById('formRegistration');
+    formRegistration.addEventListener('submit', function(event) {
+        // prevent tge default form behaviour: prevent the automatic submission of the user form
+        event.preventDefault();
+        submitForm();
     });
 }
