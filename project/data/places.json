@@ -33,6 +33,16 @@
     ],
     "places": [
     {
+        "name": "Centre Athletique Firefit",
+        "address":"7914 Bd Provencher, Saint-Léonard, QC H1R 2Y5",
+        "description": "Get fit.",
+        "point": {
+        "lat": "45.57247260645271",
+        "long": "-73.6001205667134"
+        },
+        "categoryId": 1
+    },
+    {
         "name": "Econofitness St. Michel",
         "address":"8255 Bd Saint-Michel, Montréal, QC H1Z 2B2",
         "description": "Get fit.",
@@ -43,12 +53,82 @@
         "categoryId": 1
     },
     {
+        "name": "LuxFitness",
+        "address":"5005 Boulevard Métropolitain E Suit 213, Montreal, QC H1R 1Z7",
+        "description": "Get fit.",
+        "point": {
+        "lat": "45.57929990134077",
+        "long": "-73.59262978281531"
+        },
+        "categoryId": 1
+    },
+    {
+        "name": "Buzzfit-Villeray",
+        "address":"1100 Boul Crémazie E Suite 710, Montréal, QC H2P 2X2",
+        "description": "Get fit.",
+        "point": {
+        "lat": "45.55033117830391",
+        "long": "-73.62859732944312"
+        },
+        "categoryId": 1
+    },
+    {
+        "name": "Entraînement Beyond Physical",
+        "address":"6036 Boul Métropolitain, Saint-Leonard, Quebec H1S 1A9",
+        "description": "Get fit.",
+        "point": {
+        "lat": "45.588616000328315",
+        "long": "-73.58162917729265"
+        },
+        "categoryId": 1
+    },
+    {
         "name": "Starbucks Rockland Mount Royal",
         "address":"2305 Rockland Rd, Mount Royal, Quebec H3P 1B6",
         "description": "Drink coffee for energy.",
         "point": {
         "lat": "45.52816609438094",
         "long": "-73.64781482799562"
+        },
+        "categoryId": 2
+    },
+    {
+        "name": "Boutique De Cafe Prima Goccia",
+        "address":"6188 Rue Jean-Talon E, Saint-Léonard, QC H1S 1M8",
+        "description": "Drink coffee for energy.",
+        "point": {
+        "lat": "45.58912473166041",
+        "long": "-73.57710459916109"
+        },
+        "categoryId": 2
+    },
+    {
+        "name": "Cafe Sicily",
+        "address":"1290 Rue Jean-Talon E, Montreal, Quebec H2R 1W3",
+        "description": "Drink coffee for energy.",
+        "point": {
+        "lat": "45.54434865840605",
+        "long": "-73.61012694723343"
+        },
+        "categoryId": 2
+    },
+    {
+        "name": "Bêden Càphê",
+        "address":"1706 Laurier Ave E #1, Montreal, QC H2J 1J2",
+        "description": "Drink coffee for energy.",
+        "point": {
+        "lat": "45.53585925757433",
+        "long": "-73.58139109263766"
+        },
+        "categoryId": 2
+    },
+    {
+        "name": "Café Vito",
+        "address":"151 Rue Villeray, Montreal, Quebec H2R 1G4",
+        "description": "Drink coffee for energy.",
+        "point": {
+        "lat": "45.5384115245429",
+        "long": "-73.62451526072469"
         },
         "categoryId": 2
     },
@@ -81,6 +161,76 @@
         "long": "-73.79736545407985"
         },
         "categoryId": 3
+    },
+    {
+        "name": "Marché Kim Phat",
+        "address":"3733 Rue Jarry E, Montreal, Quebec H1Z 2G1",
+        "description": "We sell food.",
+        "point": {
+        "lat": "45.569275245657366",
+        "long": "-73.60552170872896"
+        },
+        "categoryId": 4
+    },
+    {
+        "name": "Super C",
+        "address":"8200 Pie-IX Blvd, Montreal, Quebec H1Z 4P1",
+        "description": "We sell food.",
+        "point": {
+        "lat": "45.57196700819426",
+        "long": "-73.60501387235459"
+        },
+        "categoryId": 4
+    },
+    {
+        "name": "Maxi",
+        "address":"375 Rue Jean-Talon O, Montreal, Quebec H3N 2Y8",
+        "description": "We sell food.",
+        "point": {
+        "lat": "45.53082953026112",
+        "long": "-73.62278399999478"
+        },
+        "categoryId": 4
+    },
+     {
+        "name": "Restaurant L'osso",
+        "address":"7128 St Laurent Blvd, Montreal, QC H2S 3E2",
+        "description": "Amazing food here!",
+        "point": {
+        "lat": "45.534118107701005",
+        "long": "-73.61734935518636"
+        },
+        "categoryId": 5
+    },
+     {
+        "name": "Restaurant Les Mômes",
+        "address":"586 Rue Villeray, Montreal, Quebec H2R 1H6",
+        "description": "Amazing food here!",
+        "point": {
+        "lat": "45.542422889262575",
+        "long": "-73.62203851595123"
+        },
+        "categoryId": 5
+    },
+     {
+        "name": "Brocca",
+        "address":"180 Rue de Castelnau O, Montréal, QC H2R 3C1",
+        "description": "Amazing food here!",
+        "point": {
+        "lat": "45.53284269444176",
+        "long": "-73.62202072883102"
+        },
+        "categoryId": 5
+    },
+     {
+        "name": "Umami Ramen & Izakaya",
+        "address":"6660 Clark St, Montreal, QC H2S 3E7",
+        "description": "Amazing food here!",
+        "point": {
+        "lat": "45.53123939735459",
+        "long": "-73.61269388220384"
+        },
+        "categoryId": 5
     }
     ]
    }

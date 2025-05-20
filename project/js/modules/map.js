@@ -2,7 +2,7 @@ import { fetchData } from "./fetchWrapper.js";
 export async function initLeafletMap() {
     console.log("initializing the map");
 // 1) Init
-    const map = L.map('leafletMap').setView([45.5019, -73.5674], 10);
+    const map = L.map('leafletMap').setView([45.5019, -73.5674], 12);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
@@ -18,13 +18,28 @@ export async function initLeafletMap() {
     renderLocations(map,locations)
 }
 function renderLocations(map, locations){
+    let locationNames = document.getElementById("locationNames");
+    locationNames.innerHTML = `
+    <div class="btn-group-vertical" role="group" aria-label="Button group" id="locationButtons"> 
+    </div>
+    `;
+    let locationName = document.getElementById("locationButtons");
     locations.places.forEach(place => {
+        const location = document.createElement("button");
+        location.innerHTML = `
+            <input type="button" class="btn-check" name="vbtn-radio" id="btn${place.name}" autocomplete="off" checked>
+            <label class="btn btn-outline-danger" for="vbtn-radio1">${place.name}</label>
+        `;
+        locationName.appendChild(location);   
+        location.addEventListener('click', () => {
+            console.log(place.name);
+            map.setView([place.point.lat, place.point.long], 18);
+        })  
         const category = locations.categories.find(category => category.id === place.categoryId)
         var myIcon = L.icon({
             iconUrl: category.markerIcon 
         });
         var marker = L.marker([place.point.lat, place.point.long], {icon: myIcon}).addTo(map);
-        marker.bindPopup(`<b>${place.name}</b><br>${place.address}<br>`).openPopup();
-        
+        marker.bindPopup(`<b>${place.name}</b><br>${place.address}<br>`).openPopup();        
 });
 }
