@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-page="sign-in-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,26 +27,26 @@
         </nav>
     </header>
     <div>
-        <form action="user-sign-in">
+    <div id="validAlertMessage"></div>
+
+        <form id="signIn" action="">
             <fieldset>
                 <legend>Sign In</legend>
-                <label for="username">Pleae enter email or username</label>
+                <label for="email">Please enter your email</label>
                 <br>
-                <input type="text" id="username">
+                <input type="text" id="email">
                 <br>
                 <br>
                 <label for="password">Password</label>
                 <br>
-                <input type="text" id="username">
+                <input type="password" id="password">
                 <br>
                 <br>
-                <button type="submit"><a href="home.html">Continue</a></button>
+                <button type="submit">Sign In</button>
                 <br>
                 <p>New to Lussier Computer?</p>
                 <button><a href="create-account.html">Create Account</a></button>
 
-                <p>Forgot password?</p>
-                <p>Help</p>
             </fieldset>
         </form>
     </div>

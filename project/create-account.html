@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-page="create-account-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,29 +26,52 @@
             <a class="nav-button" href="map.html">Map</a>
         </nav>
     </header>
+    <div id="validAlertMessage"></div>
     
     <div class="create-account-form">
-        <form action="create-account">
+        <form id="createAccountForm" action="">
             <fieldset>
                     <legend>Create Account</legend>
                     <br>
                     <br>
-                    <input type="text" id="create-name" placeholder="Name">
+                    <input type="text" id="firstName" placeholder="First Name">
                     <br>
                     <br>
-                    <input type="text" id="create-username" placeholder="Username">
+                    <input type="text" id="lastName" placeholder="Last Name">
                     <br>
                     <br>
-                    <input type="text" id="create-email" placeholder="Email">
+                    <input type="text" id="email" placeholder="Email">
                     <br>
                     <br>
-                    <input type="password" id="create-password" placeholder="Password">
+                    <input type="password" id="password" placeholder="Password">
                     <br>
                     <br>
-                    <input type="password" id="confirm-password" placeholder="Confirm Password">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password">
                     <br>
                     <br>
-                    <button><a href="sign-in.html">Sign Up</a></button>
+                    <input type="text" id="phone" placeholder="Phone Number"/>
+                    <br>
+                    <br>
+                    <legend>Address Details</legend>
+                    <input type="text" id="street" placeholder="Street Address"/>
+                    <br>
+                    <br>
+                    <input type="text" id="apartment" placeholder="Apartment Number"/>
+                    <br>
+                    <br>
+                    <input type="text" id="postalCode" placeholder="Postal Code"/>
+                    <br>
+                    <br>
+                    <input type="text" id="city" placeholder="City"/>
+                    <br>
+                    <br>
+                    <input type="text" id="province" placeholder="Province"/>
+                    <br>
+                    <br>
+                    <input type="text" id="country" placeholder="Country"/>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn btn-success">Submit</button>
             </fieldset>
         </form>
     </div>
