@@ -3,6 +3,7 @@ import { fetchData } from "./fetchWrapper.js";
 export async function fetchPokemon() {
     try {
         console.log("Fetching pokemons");
+        // fetches the treecko pokemon from api
         let pokemon = await fetchData("https://pokeapi.co/api/v2/pokemon/treecko");
         console.log(pokemon);
         showTreecko(pokemon);
@@ -15,6 +16,7 @@ export async function fetchPokemon() {
 function showTreecko(pokemon) {
     const placePokemon = document.getElementsByClassName("pokemon-listing")[0];
     
+    // creating the cards for the pokemon
     placePokemon.innerHTML = `
         <div class="pokemon-card">
             <div id="treecko-card">
