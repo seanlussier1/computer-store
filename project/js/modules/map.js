@@ -17,15 +17,18 @@ export async function initLeafletMap() {
     // The marker need to be populated with corresponding place info: the address, coordinates
     renderLocations(map,locations)
 }
+// This method goes through every place in places.json, then it adds them to a list when an element is clicked
+// the map centers around the area of location that was clicked. It also loads all loads every place in to the map.
 function renderLocations(map, locations){
     let locationNames = document.getElementById("locationNames");
     locationNames.innerHTML = `
     <div class="btn-group-vertical" role="group" aria-label="Button group" id="locationButtons"> 
+    <ul id=locationList> </ul>
     </div>
     `;
-    let locationName = document.getElementById("locationButtons");
+    let locationName = document.getElementById("locationList");
     locations.places.forEach(place => {
-        const location = document.createElement("button");
+        const location = document.createElement("li");
         location.innerHTML = `
             <input type="button" class="btn-check" name="vbtn-radio" id="btn${place.name}" autocomplete="off" checked>
             <label class="btn btn-outline-danger" for="vbtn-radio1">${place.name}</label>
