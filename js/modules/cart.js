@@ -19,8 +19,8 @@ export function displayCartItems() {
     }
 
     const cartContainer = document.getElementsByClassName("cart-container")[0];
-    cartContainer.classList.add("cart-item-display"); //TODO: style this in css
-    cartContainer.style.width = "40%"; // TODO: Change this to css later
+    cartContainer.classList.add("cart-item-display"); 
+    cartContainer.style.width = "40%"; 
 
     cart.forEach((item, index) => {
         const itemInfo = createCustomElement(cartContainer, "div", "");

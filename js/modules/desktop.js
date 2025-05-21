@@ -1,8 +1,8 @@
 export function displayDesktops(products) {
     const computerListing = document.querySelector(".product-Listings");
-
+// Filters the products by ID based on the json data file.
     const filteredProducts = products.products.filter(product => product.category_id === 5);
-
+// Make a card for each of the filtered products.
     filteredProducts.forEach(product => {
         const productElement = document.createElement("div");
         productElement.classList.add("desktop-item");
@@ -28,7 +28,7 @@ export function displayDesktops(products) {
         computerListing.appendChild(productElement);
     });  
 }
-
+// Method to create a custom element.
 function createCustomElement(parent,newElementName,content){
     const newElem = document.createElement(newElementName);
     newElem.textContent = content;

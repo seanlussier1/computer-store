@@ -89,6 +89,7 @@ export function createAccount(event) {
         console.log(errorCounter);
         return;
     }
+    // create a json format object to store in the local storage to use when checking sign in.
     const user = {
         firstName: inputFirstName,
         lastName: inputLastName,

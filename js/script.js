@@ -12,6 +12,7 @@ import { submitForm } from "./modules/contact-form.js";
 import { createAccount } from "./modules/create-account.js";
 import { signIn } from "./modules/signIn.js";
 import { fetchPokemon } from "./modules/pokemon.js";
+import { fetchAnime } from "./modules/anime.js";
 
 document.addEventListener('DOMContentLoaded', initApp);
 
@@ -66,6 +67,8 @@ async function fetchProducts() {
             userSignIn();
         } else if (page === "pokemon-page") {
             fetchPokemon();
+        } else if(page === "anime-page") {
+            fetchAnime();
         } else {
             console.log("no matching page.");
         }

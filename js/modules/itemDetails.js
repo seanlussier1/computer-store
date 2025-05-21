@@ -1,12 +1,13 @@
 export function productDetails(products) {
     const computerListing = document.querySelector("#item-listing");
     sessionStorage.getItem("show-id")
+    // Only choose the product where the ID is the same.
     const filteredProducts = products.products.filter(product => product.item_id.toString() === sessionStorage.getItem("show-id"));
 
         const productElement = document.getElementById("item-listing");
-        productElement.classList.add("item-details-info");  // TODO: style this in css
+        productElement.classList.add("item-details-info");  
         productElement.style.width = "30rem";
-
+// Make a card for that product
         productElement.innerHTML = `
              <img src="${filteredProducts[0].thumbnail_image}" class="card-img-top" alt="Image of ${filteredProducts[0].item_title}">
              <div class="card-body">
@@ -23,7 +24,7 @@ export function productDetails(products) {
                     <button class="btn btn-secondary" id="buy-now">Buy Now</button>
          `;
         console.log(filteredProducts[0].item_title)
-
+// Add to cart button with local storage.
         const addToCartButton = document.getElementById("add-to-cart");
         addToCartButton.addEventListener("click", () => {
             
@@ -65,9 +66,3 @@ export function productDetails(products) {
 
 }; 
 
-function createCustomElement(parent,newElementName,content) {
-    const newElem = document.createElement(newElementName);
-    newElem.textContent = content;
-    parent.appendChild(newElem);
-    return newElem;
-}

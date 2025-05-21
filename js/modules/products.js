@@ -1,7 +1,6 @@
 export function displayProducts(products) {
     const computerListing = document.querySelector(".product-Listings");
-    // <a class="product-details" id="${product.item_id}" href="item-listing.html">Item Listing</a>
-
+// This class goes through every product in the product listing
     products.products.forEach(product => {
         const productElement = document.createElement("div");
         productElement.classList.add("card");
@@ -26,7 +25,7 @@ export function displayProducts(products) {
         computerListing.appendChild(productElement);
     });  
 }
-
+// Method to create a custom element.
 function createCustomElement(parent,newElementName,content){
     const newElem = document.createElement(newElementName);
     newElem.textContent = content;
