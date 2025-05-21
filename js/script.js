@@ -11,6 +11,7 @@ import { displayCartItems } from "./modules/cart.js";
 import { submitForm } from "./modules/contact-form.js";
 import { createAccount } from "./modules/create-account.js";
 import { signIn } from "./modules/signIn.js";
+import { fetchPokemon } from "./modules/pokemon.js";
 
 document.addEventListener('DOMContentLoaded', initApp);
 
@@ -63,6 +64,8 @@ async function fetchProducts() {
             createUserAccount();
         } else if(page === "sign-in-page") {
             userSignIn();
+        } else if (page === "pokemon-page") {
+            fetchPokemon();
         } else {
             console.log("no matching page.");
         }
