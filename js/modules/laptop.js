@@ -12,7 +12,6 @@ export function displayLaptops(products) {
             <img src="${product.thumbnail_image}" class="card-img-top" alt="Image of ${product.item_title}">
             <div class="card-body">
                 <h1 class="product-name">${product.item_title}</h3>
-                <p class="card-text">${product.description}</p>
                 <p class="product-price">$${product.unit_price}</p>
             </div>
         `;
